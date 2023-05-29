@@ -51,13 +51,11 @@ $choose_us_image = get_field('choose_us_image');
 
 <section class="about-section">
     <div class="about-content">
-        <div class="col-lg-12 col-sm-12">
-            <h5><?php if ($about_subtitle) { echo $about_subtitle; } ?></h5>
-            <h2><?php if ($about_title) { echo $about_title; } ?></h2>
-            <img src="<?php if ($about_image) { echo $about_image; } ?>" alt="About Image" class="about-img">
-            <div class="about-text"><?php if ($about_text) { echo $about_text; } ?></div>
-            <a href="#hotels" class="btn">Read More <i class="fa fa-arrow-right"></i></a>          
-        </div>
+        <div class="box float-left"><h5><?php if ($about_subtitle) { echo $about_subtitle; } ?></h5></div>
+        <div class="box float-left"><h2><?php if ($about_title) { echo $about_title; } ?></h2></div>
+        <div class="box float-right"><img src="<?php if ($about_image) { echo $about_image; } ?>" alt="About Image" class="about-img"> </div>
+        <div class="box float-left"><div class="about-text"><?php if ($about_text) { echo $about_text; } ?></div></div>
+        <div class="box float-left"><a href="#hotels" class="btn">Read More <i class="fa fa-arrow-right"></i></a>    </div>                        
     </div>
 </section>
 

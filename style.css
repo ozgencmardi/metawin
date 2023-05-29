@@ -173,11 +173,41 @@ html {
 }
 
 .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     max-width: 100%;  
+    height: auto;
     margin: 0 5%;
+    margin-top: 90px;
+}
+
+.box {
+    display: flex;
+}
+
+.box:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.box:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.box:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.box:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.box:nth-child(5) {
+    grid-column: 1;
+    grid-row: 4;
 }
 
 .about-content h5 {
@@ -191,14 +221,13 @@ html {
     color: #000;
     font-weight: bold;
     margin-bottom: 36px;
-    padding-right: 800px;
+    padding-right: 200px;
 }
 
 .about-content .about-text {
     font-size: 16px;
     color: #555;
     margin-bottom: 36px;
-    padding-right: 600px;
 }
 
 .about-content .btn {
@@ -210,18 +239,17 @@ html {
     border-radius: 4px;
 }
 
-.about-content img {
+.about-content .box img {
     max-width: 100%;
     height: auto;
-    text-align: right;
-    float: right;
-    top: 0;
-    right: 0;
     position: absolute;
+    top: 50px;
+    right: 0;
+    margin: 0 5%;
 }
 
 @media (min-width: 1440px) {
-    .about-content img {
+    .about-content .box img {
       width: 470px;
     }
 }
@@ -386,7 +414,6 @@ html {
     justify-content: center;
     position: relative;
   }
-  
     
 .progress-bar {
     width: 75px;
@@ -413,7 +440,6 @@ html {
     transform-origin: center center;
     animation: loading 2s linear forwards;
 }
-
 
 .progress-bar > span {
     width: 50%;
@@ -784,11 +810,37 @@ html {
     }
 
     .about-content {
+        flex-direction: column;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         max-width: 100%;   
         margin: 0 5%;
+    }
+
+    .box:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .box:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .box:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .box:nth-child(4) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .box:nth-child(5) {
+        grid-column: 1;
+        grid-row: 5;
     }
 
     .about-content h5 {
@@ -798,24 +850,114 @@ html {
 
     .about-content h2 {
         font-size: 24px;
-        padding-right: 0;
+        padding: 0;
     }
   
     .about-content h2 {
-      font-size: 28px;
-      padding-right: 0;
+        font-size: 28px;
+        padding: 0;
     }
   
     .about-content .about-text {
-      padding-right: 0;
+        padding: 0;
     }
   
     .about-content img {
-      width: 100%;
-      float: none;
-      margin-bottom: 36px;
-      position: initial;
+        width: 100%;
+        float: none !important;
+        margin-bottom: 36px !important;
+        position: initial !important;
+        padding-right: 30px;
     }
   
+    .hotels-section {
+        padding: 30px 0;
+    }
   
+    .hotels-title {
+      font-size: 24px;
+    }
+  
+    .hotels-subtitle {
+      margin-bottom: 15px;
+    }
+  
+    .hotel {
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+  
+    .column-one {
+      min-width: 28px;
+      height: auto;
+      font-size: 24px;
+      padding: 5px;
+    }
+  
+    .column-two {
+      justify-content: center;
+    }
+  
+    .column-two img {
+      width: 100%;
+      max-width: 140px;
+      height: auto;
+    }
+  
+    .column-three {
+      padding: 0 10px;
+      text-align: center;
+    }
+  
+    .column-three-title {
+      margin-bottom: 10px;
+    }
+  
+    .column-four {
+      text-align: center;
+    }
+  
+    .column-four-star {
+      justify-content: center;
+    }
+  
+    .column-four-text {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  
+    .column-five {
+      justify-content: center;
+    }
+  
+    .progress-bar {
+      width: 60px;
+      height: 60px;
+      margin: 10px;
+    }
+  
+    .progress-bar:after {
+      clip: rect(0, 60px, 120px, 0);
+    }
+  
+    .progress-bar .progress-value {
+      width: 80%;
+      height: 80%;
+      line-height: 55px;
+      font-size: 20px;
+    }
+  
+    .column-six {
+      text-align: center;
+    }
+  
+    .column-six-button {
+      margin-top: 15px;
+    }
+  
+    .column-six-text {
+      margin-top: 5px;
+    }
 }
