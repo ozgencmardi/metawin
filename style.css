@@ -319,9 +319,9 @@ html {
     border-radius: 10px 10px 0 0;
     text-align: center;
     line-height: 31px;
-  }
+}
   
-  .hotel-list {
+.hotel-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -869,95 +869,108 @@ html {
         position: initial !important;
         padding-right: 30px;
     }
-  
-    .hotels-section {
-        padding: 30px 0;
-    }
-  
+
     .hotels-title {
-      font-size: 24px;
+        margin: 0 5%;
     }
-  
-    .hotels-subtitle {
-      margin-bottom: 15px;
+    
+    .hotel-list {
+        margin: 0 5%;
     }
   
     .hotel {
-      height: auto;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: auto;
+        gap: 0px;
+        margin-bottom: 20px;
+        padding: 0 20px;
     }
-  
+    
     .column-one {
-      min-width: 28px;
-      height: auto;
-      font-size: 24px;
-      padding: 5px;
+        display: none;
     }
-  
+
     .column-two {
-      justify-content: center;
+        grid-column: 1;
+        margin: 10px 0 0 -40px;
     }
-  
-    .column-two img {
-      width: 100%;
-      max-width: 140px;
-      height: auto;
-    }
-  
+
     .column-three {
-      padding: 0 10px;
-      text-align: center;
+        grid-column: 1;
+        grid-row: 3;
+        margin: -90px -80px 0 0;
+        border-top: 1px solid #E0E0E0;
+        padding: 10px 0;
     }
-  
-    .column-three-title {
-      margin-bottom: 10px;
-    }
-  
+    
     .column-four {
-      text-align: center;
+        grid-column: 2;
+        grid-row: 2; 
+        margin: -120px 0 0 -30px;  
     }
-  
-    .column-four-star {
-      justify-content: center;
-    }
-  
+
     .column-four-text {
-      margin-top: 5px;
-      font-size: 14px;
+        display: none;
     }
-  
+
     .column-five {
-      justify-content: center;
+        grid-column: 2;
+        margin-left: -30px;
     }
-  
-    .progress-bar {
-      width: 60px;
-      height: 60px;
-      margin: 10px;
-    }
-  
-    .progress-bar:after {
-      clip: rect(0, 60px, 120px, 0);
-    }
-  
-    .progress-bar .progress-value {
-      width: 80%;
-      height: 80%;
-      line-height: 55px;
-      font-size: 20px;
-    }
-  
+    
     .column-six {
-      text-align: center;
+        grid-column: 1;
+        grid-row: 4;
+        margin: 0 -80px 20px 0;
+        border-top: 1px solid #E0E0E0;
     }
-  
-    .column-six-button {
-      margin-top: 15px;
+
+    .choose-us-section {
+        padding: 30px 0;
+        margin: 0 5%;
     }
-  
-    .column-six-text {
-      margin-top: 5px;
+    
+    .choose-us-heading {
+        max-width: 90%;
+    }
+    
+    .choose-us-section h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .choose-us-section h2 {
+        font-size: 32px;
+        margin-bottom: 38px;
+    }
+    
+    .choose-us-content {
+        flex-direction: column;
+        margin: 10px 0 0 0;
+    }
+    
+    .choose-us-content .left-part,
+    .choose-us-content .right-part {
+        padding-left: 0;
+    }
+    
+    .choose-us-content img {
+        float: none;
+        margin-bottom: 38px;
+    }
+    
+    .choose-us-paragraph {
+        margin-bottom: 38px;
+    }
+    
+    .choose-us-content h2 {
+        font-size: 24px;
+        margin: 10px 0 0 0 !important;
+    }
+    
+    .choose-us-content .choose-us-text {
+        font-size: 16px;
+        margin: 10px 0 0 0 !important;
     }
 }
