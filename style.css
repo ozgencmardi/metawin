@@ -79,7 +79,7 @@ html {
     background-position: center center;
     background-size: cover;
     width: 100%;
-    height: 961px;
+    height: 960px;
     text-align: left;
     position: relative;
     display: flex;
@@ -125,6 +125,7 @@ html {
     color: #fff;
     margin-bottom: 27px;
     font-weight: bold;
+    padding-right: 40%;
 }
 
 .hero-content p {
@@ -167,6 +168,7 @@ html {
     position: relative;
     z-index: 3;
     width: 100%;
+    height: 700px;
     padding: 50px 0;
 }
 
@@ -174,19 +176,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 100%;
+    max-width: 100%;  
     margin: 0 5%;
-}
-
-.about-content .left-part {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-content .right-part {
-    text-align: right;
-    float: right;
 }
 
 .about-content h5 {
@@ -200,14 +191,14 @@ html {
     color: #000;
     font-weight: bold;
     margin-bottom: 36px;
-    padding-right: 250px;
+    padding-right: 800px;
 }
 
 .about-content .about-text {
     font-size: 16px;
     color: #555;
     margin-bottom: 36px;
-    padding-right: 130px;
+    padding-right: 600px;
 }
 
 .about-content .btn {
@@ -224,6 +215,9 @@ html {
     height: auto;
     text-align: right;
     float: right;
+    top: 0;
+    right: 0;
+    position: absolute;
 }
 
 @media (min-width: 1440px) {
@@ -693,4 +687,135 @@ html {
     color: #939393;
     font-size: 16px;
     font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        background-repeat: no-repeat;
+        background-position: -500px -50px;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    
+    .hero-logo {
+        position: absolute;
+        left: 55%;
+        transform: translate(-50%, 0%);
+        top: 0;
+        z-index: 2;
+    }
+    
+    .logo {
+        width: auto;
+        height: auto;
+    }
+    
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        margin: 20px;
+        padding: 0 !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+        color: #fff;
+        margin-bottom: 15px;
+        font-weight: bold;
+        padding: 0 !important;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    .hero-content .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content .btn:hover {
+        background-color: #fff;
+        color: #FC115C;
+    }
+    
+    .hero-content i {
+        font-size: 16px;
+        background-color: #fff;
+        color: #FC115C;
+        border: 1px solid #FC115C;
+        border-radius: 50%;
+        padding: 8px;
+        margin-left: 10px;
+    }
+    
+    .about-section {
+        background-color: #fff;
+        margin-top: -100px;
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        height: initial;
+        padding: 50px 0;
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;   
+        margin: 0 5%;
+    }
+
+    .about-content h5 {
+        font-size: 14px;
+        margin-bottom: 36px;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+        padding-right: 0;
+    }
+  
+    .about-content h2 {
+      font-size: 28px;
+      padding-right: 0;
+    }
+  
+    .about-content .about-text {
+      padding-right: 0;
+    }
+  
+    .about-content img {
+      width: 100%;
+      float: none;
+      margin-bottom: 36px;
+      position: initial;
+    }
+  
+  
 }

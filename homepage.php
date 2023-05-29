@@ -35,32 +35,28 @@ $choose_us_image = get_field('choose_us_image');
     <div class="image-overlay"></div>
     <div class="container">
         <div class="hero-logo row align-items-center">
-            <div class="col-lg-3">
+            <div class="col-lg-12 col-sm-12">
             <a href="<?php echo home_url(); ?>"><img src="<?php if ($logo) { echo $logo; }; ?>" alt="Logo" class="logo"></a>
-            </div>
-            <div class="col-lg-9"></div>       
+            </div>   
         </div>
         <div class="hero-content row align-items-center">
-            <div class="col-lg-7">
+            <div class="col-lg-12 col-sm-12">
                 <h1><?php if ($hero_title) { echo $hero_title; } ?></h1>
                 <p><?php if ($hero_text) { echo $hero_text; } ?></p>
                 <a href="#hotels" class="btn"><?php if ($hero_button_text) { echo $hero_button_text; } ?> <i class="fa fa-arrow-down"></i></a>
             </div>
-            <div class="col-lg-5"></div>
         </div>
     </div>
 </section>
 
 <section class="about-section">
     <div class="about-content">
-        <div class="left-part col-lg-7">
+        <div class="col-lg-12 col-sm-12">
             <h5><?php if ($about_subtitle) { echo $about_subtitle; } ?></h5>
             <h2><?php if ($about_title) { echo $about_title; } ?></h2>
-            <div class="about-text"><?php if ($about_text) { echo $about_text; } ?></div>
-            <a href="#hotels" class="btn">Read More <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="right-part col-lg-5">
             <img src="<?php if ($about_image) { echo $about_image; } ?>" alt="About Image" class="about-img">
+            <div class="about-text"><?php if ($about_text) { echo $about_text; } ?></div>
+            <a href="#hotels" class="btn">Read More <i class="fa fa-arrow-right"></i></a>          
         </div>
     </div>
 </section>
