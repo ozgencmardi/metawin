@@ -53,7 +53,7 @@ $choose_us_image = get_field('choose_us_image');
     <div class="about-content">
         <div class="box float-left"><h5><?php if ($about_subtitle) { echo $about_subtitle; } ?></h5></div>
         <div class="box float-left"><h2><?php if ($about_title) { echo $about_title; } ?></h2></div>
-        <div class="box float-right"><img src="<?php if ($about_image) { echo $about_image; } ?>" alt="About Image" class="about-img"> </div>
+        <div class="box float-right"><img src="<?php if ($about_image) { echo $about_image; } ?>" alt="About Image"></div>
         <div class="box float-left"><div class="about-text"><?php if ($about_text) { echo $about_text; } ?></div></div>
         <div class="box float-left"><a href="#hotels" class="btn">Read More <i class="fa fa-arrow-right"></i></a>    </div>                        
     </div>
@@ -180,7 +180,7 @@ $choose_us_image = get_field('choose_us_image');
     </div>
     <div class="choose-us-content">
         <div class="left-part col-lg-5">
-            <img src="<?php if ($choose_us_image) { echo $choose_us_image; } ?>" alt="About Image" class="about-img">
+            <img src="<?php if ($choose_us_image) { echo $choose_us_image; } ?>" alt="Choose Us Image">
         </div>
         <div class="right-part col-lg-7">
             <div class="choose-us-paragraph">

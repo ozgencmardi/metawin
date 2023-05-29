@@ -1,19 +1,16 @@
 <?php
 
-function enqueue_bootstrap() {
-    // Enqueue Bootstrap CSS
-    wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array(), '4.5.2');
+function enqueue_bootstrap_and_jquery() {
+    // Enqueue jQuery
+    //wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true);
 
     // Enqueue Bootstrap JavaScript (requires jQuery)
-    wp_enqueue_script('bootstrap-js', 'https://cdn.usebootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js', array('jquery'), '4.5.2', true);
+    //wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '4.0.0', true);
 
-    // Enqueue Bootstrap JavaScript
-    wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js', array('jquery'), '4.5.2', true);
-
-    // Enqueue jQuery
-    wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', true);
+    // Enqueue Bootstrap CSS
+    //wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0.0');
 }
-add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+add_action('wp_enqueue_scripts', 'enqueue_bootstrap_and_jquery');
 
 
 function enqueue_font_poppins() {
@@ -35,16 +32,18 @@ function enqueue_font_awesome() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 
-function register_custom_menu() {
-    register_nav_menu('custom-menu', 'Custom Menu');
-  }
-add_action('after_setup_theme', 'register_custom_menu');  
-
 
 function enqueue_smooth_scroll() {
     wp_enqueue_script('smooth-scroll', get_template_directory_uri() . '/assets/js/smooth-scroll.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_smooth_scroll');
+
+
+function enqueue_mobile_menu() {
+    wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/assets/js/mobile-menu.js', array( 'jquery' ), '1.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_mobile_menu' );
+
 
 ?>
 
