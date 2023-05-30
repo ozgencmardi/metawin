@@ -695,7 +695,7 @@ html {
         background-position: -500px -50px;
         background-size: cover;
         width: 100%;
-        height: 700px;
+        height: 620px;
         position: relative;
     }
     
@@ -724,24 +724,28 @@ html {
     
     .hero-content {
         position: absolute;
+        width: 100%;
         top: 50%;
-        left: 55%;
+        left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
         text-align: center;
-        margin: 20px;
+        margin: 20px 0 0 0 !important;
         padding: 0 !important;
     }
     
     .hero-content h1 {
+        width: 100%;
         font-size: 36px;
         color: #fff;
-        margin-bottom: 15px;
+        margin: 0 0 15px 0 !important;;
         font-weight: bold;
         padding: 0 !important;
+        margin: 0 !important;
     }
     
     .hero-content p {
+        width: 100%;
         font-size: 16px;
         color: #fff;
     }
@@ -750,6 +754,7 @@ html {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: auto;
     }
     
     .hero-content .btn:hover {
@@ -991,10 +996,6 @@ html {
 
 
 /* Mobile Menu */
-
-.container {
-    width: 1640px !important;
-}
 
 .navbar {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.6) 100%), url('assets/images/header-bg.webp');

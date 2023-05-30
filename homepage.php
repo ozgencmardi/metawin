@@ -72,7 +72,7 @@ $choose_us_image = get_field('choose_us_image');
     <?php
     $args = array(
       'post_type' => 'hotels',
-      'posts_per_page' => -1, // Retrieve all hotels
+      'posts_per_page' => 10, // Retrieve maximum 10 hotels
       'meta_key' => 'hotel_point', // Sort by the 'hotel_point' custom field
       'orderby' => 'meta_value_num', // Use numeric value for sorting
       'order' => 'DESC', // Sort in descending order
@@ -81,8 +81,8 @@ $choose_us_image = get_field('choose_us_image');
     $query = new WP_Query($args);
 
     if ($query->have_posts()) {
-      $number = 1; // Initialize hotel number counter
-      while ($query->have_posts()) {
+    $number = 1; // Initialize hotel number counter
+    while ($query->have_posts()) {
         $query->the_post();
 
         // Get custom field values
